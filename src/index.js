@@ -51,7 +51,7 @@ app.put("/alunos", (req, res, next) => {
         aluno.email = req.body.email
     }
   })
-  res.status(204).end();
+  res.status(204).json(alunos);
 });
 //tratamento de requisições DELETE
 app.delete("/alunos", (req, res, next) => {
@@ -67,5 +67,5 @@ app.delete("/alunos", (req, res, next) => {
     }
   })
   alunos = alunos2;
-  res.status(204).end();
+  res.status(204).json(alunos);
 });
